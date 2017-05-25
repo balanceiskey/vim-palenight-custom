@@ -2,7 +2,7 @@ hi clear
 syntax reset
 set background=dark
 
-let g:colors_name = "material-palenight"
+let g:colors_name = "Palenight"
 
 let NONE="NONE"
 let BACKGROUND="#1E202F"
