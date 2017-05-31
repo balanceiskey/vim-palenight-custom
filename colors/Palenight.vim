@@ -19,7 +19,7 @@ let GREEN="#C2E981"
 let CYAN="#86DDFF"
 let BLUE="#82AAFF"
 let PALEBLUE="#B2CCD6"
-let PURPLE="#C8EFEC"
+let PURPLE="#C58DE9"
 let BROWN="#C17E70"
 let PINK="#F07178"
 let VIOLET="#BB80B3"
@@ -29,19 +29,22 @@ let Colors['Normal'] = { "guibg": BACKGROUND, "guifg": FOREGROUND }
 
 " FOREGROUND
 let Colors['jsVariableDef'] = { "guibg": NONE, "guifg": FOREGROUND }
+let Colors['jsObjectKey'] = { "guibg": NONE, "guifg": FOREGROUND }
+let Colors['jsBrackets'] = { "guibg": NONE, "guifg": FOREGROUND }
+let Colors['jsParens'] = { "guibg": NONE, "guifg": FOREGROUND }
+let Colors['ALEErrorSign'] = { "guibg": NONE, "guifg": FOREGROUND }
+let Colors['ALEWarningSign'] = { "guibg": NONE, "guifg": FOREGROUND }
 
 " COMMENTS
-let Colors['jsEnvComment'] = { "guibg": NONE, "guifg": FOREGROUND }
-let Colors['jsComment'] = { "guibg": NONE, "guifg": FOREGROUND }
+let Colors['Comment'] = { "guibg": NONE, "guifg": COMMENTS }
+let Colors['jsEnvComment'] = { "guibg": NONE, "guifg": COMMENTS }
+let Colors['jsComment'] = { "guibg": NONE, "guifg": COMMENTS }
 
 " SEARCH
 let Colors['Search'] = { "guibg": SEARCH, "guifg": NONE, "gui": NONE }
 let Colors['Visual'] = { "guibg": SEARCH, "guifg": NONE, "gui": NONE }
-
-" WHITE
-let Colors['jsParens'] = { "guibg": NONE, "guifg": WHITE }
-let Colors['jsBrackets'] = { "guibg": NONE, "guifg": WHITE }
-let Colors['jsObjectKey'] = { "guibg": NONE, "guifg": WHITE }
+let Colors['Spellbad'] = { "gui": "italic" , "guibg": SEARCH, "guifg": FOREGROUND }
+let Colors['VertSplit'] = { "guibg": NONE, "guifg": SEARCH }
 
 " ORANGE
 let Colors['jsNumber'] = { "guibg": NONE, "guifg": ORANGE }
@@ -69,9 +72,12 @@ let Colors['jsModuleBraces'] = { "guibg": NONE, "guifg": CYAN }
 let Colors['jsTemplateBraces'] = { "guibg": NONE, "guifg": CYAN }
 let Colors['xmlEqual'] = { "guibg": NONE, "guifg": CYAN }
 
+hi Special gui=italic guifg=#ff526f guibg=#292d3d
+
 " PURPLE
 let Colors['jsReturn'] = { "guibg": NONE, "guifg": PURPLE }
 let Colors['jsOperator'] = { "guibg": NONE, "guifg": PURPLE }
+let Colors['jsFunction'] = { "guibg": NONE, "guifg": PURPLE }
 let Colors['jsConditional'] = { "guibg": NONE, "guifg": PURPLE }
 let Colors['xmlAttrib'] = { "guibg": NONE, "guifg": PURPLE }
 let Colors['jsArrowFunction'] = { "guibg": NONE, "guifg": PURPLE }
@@ -85,6 +91,13 @@ let Colors['jsCatch'] = { "guibg": NONE, "guifg": PURPLE }
 let Colors['xmlTag'] = { "guibg": NONE, "guifg": RED }
 let Colors['xmlEndTag'] = { "guibg": NONE, "guifg": RED }
 let Colors['xmlTagName'] = { "guibg": NONE, "guifg": RED }
+let Colors['Error'] = { "guibg": RED, "guifg": FOREGROUND }
+let Colors['ErrorMsg'] = { "guibg": RED, "guifg": FOREGROUND }
+
+" hi SpellBad gui=undercurl guisp=NONE guifg=NONE guibg=#260808
+
+" hi Error gui=NONE guifg=NONE guibg=#260808
+" hi ErrorMsg gui=NONE guifg=NONE guibg=#260808
 
 
 for key in keys(Colors)
@@ -145,7 +158,6 @@ endfor
 
 hi Boolean gui=NONE guifg=#79d0f6 guibg=NONE
 hi ColorColumn gui=NONE guifg=NONE guibg=#1a1a1a
-hi Comment gui=NONE guifg=#696969 guibg=NONE
 hi Conceal gui=NONE guifg=#808080 guibg=NONE
 hi Conditional gui=NONE guifg=#8f8f8f guibg=NONE
 hi Constant gui=NONE guifg=#808080 guibg=NONE
@@ -158,8 +170,6 @@ hi DiffChange gui=NONE guifg=NONE guibg=#1a1a1a
 hi DiffDelete gui=NONE guifg=NONE guibg=#260808
 hi DiffText gui=NONE guifg=NONE guibg=#333333
 hi Directory gui=NONE guifg=#8f8f8f guibg=NONE
-hi Error gui=NONE guifg=NONE guibg=#260808
-hi ErrorMsg gui=NONE guifg=NONE guibg=#260808
 hi FoldColumn gui=NONE guifg=#616161 guibg=NONE
 hi Folded gui=NONE guifg=#707070 guibg=NONE
 hi Ignore gui=NONE guifg=NONE guibg=NONE
@@ -176,9 +186,7 @@ hi PmenuSel gui=NONE guifg=NONE guibg=#333333
 hi PmenuThumb gui=NONE guifg=NONE guibg=#424242
 hi Question gui=NONE guifg=NONE guibg=NONE
 hi SignColumn gui=NONE guifg=#616161 guibg=NONE
-hi Special gui=italic guifg=#ff526f guibg=#292d3d
 hi SpecialKey gui=NONE guifg=#616161 guibg=NONE
-hi SpellBad gui=undercurl guisp=NONE guifg=NONE guibg=#260808
 hi SpellCap gui=undercurl guisp=NONE guifg=NONE guibg=NONE
 hi SpellLocal gui=undercurl guisp=NONE guifg=NONE guibg=#082608
 hi SpellRare gui=undercurl guisp=NONE guifg=NONE guibg=#262626
@@ -194,10 +202,10 @@ hi Title gui=NONE guifg=#808080 guibg=NONE
 hi Todo gui=standout guifg=NONE guibg=NONE
 hi Type gui=NONE guifg=#8f8f8f guibg=NONE
 hi Underlined gui=NONE guifg=NONE guibg=NONE
-hi VertSplit gui=NONE guifg=#333333 guibg=NONE
 hi VisualNOS gui=NONE guifg=NONE guibg=NONE
 hi WarningMsg gui=NONE guifg=NONE guibg=#260808
 hi WildMenu gui=NONE guifg=NONE guibg=#525252
 hi lCursor gui=NONE guifg=NONE guibg=NONE
 hi Identifier gui=NONE guifg=#82AAFF guibg=NONE
 hi PreProc gui=NONE guifg=NONE guibg=NONE
+
