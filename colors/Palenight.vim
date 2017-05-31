@@ -5,20 +5,21 @@ set background=dark
 let g:colors_name = "Palenight"
 
 let NONE="NONE"
-let BACKGROUND="#1E202F"
-let COMMENTS="#676E95"
-let FOREGROUND="#9599BE"
+let BACKGROUND="#292D3F"
+let COMMENTS="#676D96"
+let FOREGROUND="#a6abce"
+let SEARCH="#3F4464"
 
 let WHITE="#FFFFFF"
 let BLACK="#000000"
 let RED="#FF5370"
 let ORANGE="#F78C6C"
-let YELLOW="#FFCB6B"
-let GREEN="#C3E88D"
-let CYAN="#89DDFF"
+let YELLOW="#FFCC63"
+let GREEN="#C2E981"
+let CYAN="#86DDFF"
 let BLUE="#82AAFF"
 let PALEBLUE="#B2CCD6"
-let PURPLE="#C792EA"
+let PURPLE="#C8EFEC"
 let BROWN="#C17E70"
 let PINK="#F07178"
 let VIOLET="#BB80B3"
@@ -32,6 +33,10 @@ let Colors['jsVariableDef'] = { "guibg": NONE, "guifg": FOREGROUND }
 " COMMENTS
 let Colors['jsEnvComment'] = { "guibg": NONE, "guifg": FOREGROUND }
 let Colors['jsComment'] = { "guibg": NONE, "guifg": FOREGROUND }
+
+" SEARCH
+let Colors['Search'] = { "guibg": SEARCH, "guifg": NONE, "gui": NONE }
+let Colors['Visual'] = { "guibg": SEARCH, "guifg": NONE, "gui": NONE }
 
 " WHITE
 let Colors['jsParens'] = { "guibg": NONE, "guifg": WHITE }
@@ -49,9 +54,9 @@ let Colors['jsNull'] = { "guibg": NONE, "guifg": ORANGE }
 let Colors['jsGlobalObjects'] = { "guibg": NONE, "guifg": YELLOW }
 
 " BLUE
-let Colors['jsGlobalNodeObjects'] = { "guibg": NONE, "guifg": PURPLE }
-let Colors['jsFuncCall'] = { "guibg": NONE, "guifg": PURPLE }
-let Colors['jsTaggedTemplate'] = { "guibg": NONE, "guifg": PURPLE }
+let Colors['jsGlobalNodeObjects'] = { "guibg": NONE, "guifg": BLUE }
+let Colors['jsFuncCall'] = { "guibg": NONE, "guifg": BLUE }
+let Colors['jsTaggedTemplate'] = { "guibg": NONE, "guifg": BLUE }
 
 " CYAN
 let Colors['jsDestructuringBraces'] = { "guibg": NONE, "guifg": CYAN }
@@ -66,6 +71,7 @@ let Colors['xmlEqual'] = { "guibg": NONE, "guifg": CYAN }
 
 " PURPLE
 let Colors['jsReturn'] = { "guibg": NONE, "guifg": PURPLE }
+let Colors['jsOperator'] = { "guibg": NONE, "guifg": PURPLE }
 let Colors['jsConditional'] = { "guibg": NONE, "guifg": PURPLE }
 let Colors['xmlAttrib'] = { "guibg": NONE, "guifg": PURPLE }
 let Colors['jsArrowFunction'] = { "guibg": NONE, "guifg": PURPLE }
@@ -163,14 +169,12 @@ hi MatchParen gui=NONE guifg=NONE guibg=#333333
 hi ModeMsg gui=NONE guifg=NONE guibg=NONE
 hi MoreMsg gui=NONE guifg=NONE guibg=NONE
 hi NonText gui=NONE guifg=#616161 guibg=NONE
-" hi Normal gui=NONE guifg=#9599BE guibg=#1E202F
 hi Number gui=NONE guifg=#fac7f9 guibg=NONE
 hi Pmenu gui=NONE guifg=NONE guibg=#1a1a1a
 hi PmenuSbar gui=NONE guifg=NONE guibg=#262626
 hi PmenuSel gui=NONE guifg=NONE guibg=#333333
 hi PmenuThumb gui=NONE guifg=NONE guibg=#424242
 hi Question gui=NONE guifg=NONE guibg=NONE
-hi Search gui=NONE guifg=NONE guibg=#262626
 hi SignColumn gui=NONE guifg=#616161 guibg=NONE
 hi Special gui=italic guifg=#ff526f guibg=#292d3d
 hi SpecialKey gui=NONE guifg=#616161 guibg=NONE
@@ -191,13 +195,9 @@ hi Todo gui=standout guifg=NONE guibg=NONE
 hi Type gui=NONE guifg=#8f8f8f guibg=NONE
 hi Underlined gui=NONE guifg=NONE guibg=NONE
 hi VertSplit gui=NONE guifg=#333333 guibg=NONE
-hi Visual gui=NONE guifg=NONE guibg=#333333
 hi VisualNOS gui=NONE guifg=NONE guibg=NONE
 hi WarningMsg gui=NONE guifg=NONE guibg=#260808
 hi WildMenu gui=NONE guifg=NONE guibg=#525252
 hi lCursor gui=NONE guifg=NONE guibg=NONE
 hi Identifier gui=NONE guifg=#82AAFF guibg=NONE
 hi PreProc gui=NONE guifg=NONE guibg=NONE
-
-" JS
-
