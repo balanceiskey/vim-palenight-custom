@@ -60,6 +60,9 @@ let Colors['jsGlobalObjects'] = { "guibg": NONE, "guifg": YELLOW }
 let Colors['jsGlobalNodeObjects'] = { "guibg": NONE, "guifg": BLUE }
 let Colors['jsFuncCall'] = { "guibg": NONE, "guifg": BLUE }
 let Colors['jsTaggedTemplate'] = { "guibg": NONE, "guifg": BLUE }
+let Colors['markdownLinkText'] = { "guibg": NONE, "guifg": BLUE }
+let Colors['markdownUrl'] = { "guibg": NONE, "guifg": BLUE }
+let Colors['markdownCode'] = { "guibg": NONE, "guifg": BLUE }
 
 " CYAN
 let Colors['jsDestructuringBraces'] = { "guibg": NONE, "guifg": CYAN }
@@ -70,9 +73,11 @@ let Colors['jsFuncBraces'] = { "guibg": NONE, "guifg": CYAN }
 let Colors['jsIfElseBraces'] = { "guibg": NONE, "guifg": CYAN }
 let Colors['jsModuleBraces'] = { "guibg": NONE, "guifg": CYAN }
 let Colors['jsTemplateBraces'] = { "guibg": NONE, "guifg": CYAN }
+let Colors['Special'] = { "guibg": NONE, "guifg": CYAN }
+let Colors['SpecialKey'] = { "guibg": NONE, "guifg": CYAN }
+let Colors['markdownH1'] = { "guibg": NONE, "guifg": CYAN }
+let Colors['markdownH2'] = { "guibg": NONE, "guifg": CYAN }
 let Colors['xmlEqual'] = { "guibg": NONE, "guifg": CYAN }
-
-hi Special gui=italic guifg=#ff526f guibg=#292d3d
 
 " PURPLE
 let Colors['jsReturn'] = { "guibg": NONE, "guifg": PURPLE }
@@ -186,7 +191,6 @@ hi PmenuSel gui=NONE guifg=NONE guibg=#333333
 hi PmenuThumb gui=NONE guifg=NONE guibg=#424242
 hi Question gui=NONE guifg=NONE guibg=NONE
 hi SignColumn gui=NONE guifg=#616161 guibg=NONE
-hi SpecialKey gui=NONE guifg=#616161 guibg=NONE
 hi SpellCap gui=undercurl guisp=NONE guifg=NONE guibg=NONE
 hi SpellLocal gui=undercurl guisp=NONE guifg=NONE guibg=#082608
 hi SpellRare gui=undercurl guisp=NONE guifg=NONE guibg=#262626
