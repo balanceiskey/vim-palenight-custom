@@ -212,4 +212,3 @@ hi WildMenu gui=NONE guifg=NONE guibg=#525252
 hi lCursor gui=NONE guifg=NONE guibg=NONE
 hi Identifier gui=NONE guifg=#82AAFF guibg=NONE
 hi PreProc gui=NONE guifg=NONE guibg=NONE
-
